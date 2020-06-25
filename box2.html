@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+
+    <style>
+        .wrapper {
+            width: 50vw;
+            height: 50vw;
+            margin: auto;
+        }
+        .box {
+            color: #FFFFFF;
+            background-color: black;
+            height: 20%;
+            width: 20%;
+            float: left;   
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+<script>
+    
+    for(let i = 0; i < 25; i++)
+    {
+        document.getElementsByClassName('box')[i].onmouseover = function() {mouseOver('box', i)};
+    }
+
+function mouseOver(box, indexNum) {
+  const randomColor = Math.floor(Math.random()*16777215).toString(16);
+  document.getElementsByClassName(box)[indexNum].style.backgroundColor = "#" + randomColor;
+}
+
+</script>
+</body>
+</html>
